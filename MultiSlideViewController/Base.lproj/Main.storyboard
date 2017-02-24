@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tvm-Ph-kz8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SideMenuVC-->
+        <scene sceneID="xhL-aJ-8rk">
+            <objects>
+                <viewController restorationIdentifier="SlideMenuID" storyboardIdentifier="SlideMenuSID" id="o2z-R3-pwV" userLabel="SideMenuVC" customClass="SlideMenuVC" customModule="MultiSlideViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wfG-CQ-vQO"/>
+                        <viewControllerLayoutGuide type="bottom" id="8wJ-O3-0sr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tDV-Fp-CtU">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6x0-LI-5G8">
+                                <rect key="frame" x="0.0" y="20" width="300" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6x0-LI-5G8" secondAttribute="trailing" id="Vfm-BH-JFF"/>
+                            <constraint firstAttribute="leading" secondItem="6x0-LI-5G8" secondAttribute="leading" id="YdK-IB-sV3"/>
+                            <constraint firstItem="6x0-LI-5G8" firstAttribute="top" secondItem="wfG-CQ-vQO" secondAttribute="bottom" id="kGD-3R-Sxf"/>
+                            <constraint firstItem="8wJ-O3-0sr" firstAttribute="top" secondItem="6x0-LI-5G8" secondAttribute="bottom" id="uVL-m8-9BH"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="667"/>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="6x0-LI-5G8" id="Orr-wo-7g0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPn-4a-NwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="122"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController restorationIdentifier="MainID" id="BYZ-38-t0r" userLabel="MainVC" customClass="MainVC" customModule="MultiSlideViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.60293563159999997" blue="0.56514269429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main VC" id="0HN-FK-qwz">
+                        <barButtonItem key="leftBarButtonItem" width="30" style="done" id="DFF-2s-TPy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ixC-Qy-IRC">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.25700889189999998" green="0.633367703" blue="0.076411697129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="slideBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Pb-5F-php"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentView" destination="8bC-Xf-vdC" id="6gD-Mg-Xbi"/>
+                        <outlet property="slideBTOutlet" destination="ixC-Qy-IRC" id="3oX-3z-FMT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="122"/>
+        </scene>
+        <!--GreenVC-->
+        <scene sceneID="bwM-mG-Eb0">
+            <objects>
+                <viewController restorationIdentifier="GreenID" storyboardIdentifier="GreenSID" id="pDz-7e-fv0" userLabel="GreenVC" customClass="GreenVC" customModule="MultiSlideViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2uU-nP-roI"/>
+                        <viewControllerLayoutGuide type="bottom" id="KIr-0V-f3G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VDP-mf-Jz7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.25700889189999998" green="0.633367703" blue="0.076411697129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQD-wv-ZNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="807"/>
+        </scene>
+        <!--RedVC-->
+        <scene sceneID="31Q-di-6gi">
+            <objects>
+                <viewController restorationIdentifier="RedID" storyboardIdentifier="RedSID" id="Etl-8e-vmC" userLabel="RedVC" customClass="RedVC" customModule="MultiSlideViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CrG-Wc-wna"/>
+                        <viewControllerLayoutGuide type="bottom" id="gka-ba-8p9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sEO-gB-HgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1iR-wk-aPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-999" y="808"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G5C-J5-gzO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tvm-Ph-kz8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h0s-y5-12i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gIO-rS-2Tp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YG8-yj-TrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639" y="122"/>
+        </scene>
+        <!--YellowVC-->
+        <scene sceneID="fPL-Sx-tLv">
+            <objects>
+                <viewController restorationIdentifier="YellowID" storyboardIdentifier="YellowSID" id="xkH-1S-iXx" userLabel="YellowVC" customClass="YellowVC" customModule="MultiSlideViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="99g-uI-Oqe"/>
+                        <viewControllerLayoutGuide type="bottom" id="V4C-yr-Dgc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TLu-st-UvL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94568806100000002" green="1" blue="0.49558116229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqa-DY-Mvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="807"/>
+        </scene>
+        <!--BlueVC-->
+        <scene sceneID="4rh-Gd-DpL">
+            <objects>
+                <viewController restorationIdentifier="BlueID" storyboardIdentifier="BlueSID" id="WNa-X3-a5c" userLabel="BlueVC" customClass="BlueVC" customModule="MultiSlideViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Jr-Dn-Y8i"/>
+                        <viewControllerLayoutGuide type="bottom" id="HwS-d3-jLo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rEX-xM-awl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5jI-Kb-YeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="807"/>
+        </scene>
+    </scenes>
+</document>
